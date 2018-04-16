@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object Constructors</title>
+</head>
+    
+<body>
+<p>Javascript</p>
+<script>
+function phone(make, model, warranty, color){
+    this.make = make;
+    this.model = model;
+    this.warranty = warranty;
+    this.color = color;
+    this.extendWarranty = function(x) {
+        this.warranty += x;
+    }
+}
+//All objects get their properties from a prototype. In order for a function to get a property, you must add the property to the prototype.    
+var myPhone = new phone("Apple", "Iphone 5", 12, "white")
+window.console.log(myPhone);
+myPhone.extendWarranty(12);
+window.console.log(myPhone.warranty);
+
+myPhone.condition = "like new";
+window.console.log(myPhone.condition);  
+var myBrothersPhone = new phone("Apple", "Iphone 4", 6, "black");
+window.console.log(myBrothersPhone);
+window.console.log(myBrothersPhone.condition); 
+phone.prototype.condition = "new";
+window.console.log(myBrothersPhone.condition);    
+</script>
+</body>
+</html>

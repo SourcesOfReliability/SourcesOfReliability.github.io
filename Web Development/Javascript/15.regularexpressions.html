@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Regular Expressions</title>
+</head>
+    
+<body>
+<p>String: <span id="string"></span></p>
+<p>Pattern: <span id="pattern"></span></p>
+<p>Result(search): <span id="search"></span></p>
+<p>Result(match): <span id="match"></span></p>
+<p>Result(test): <span id="test"></span></p>
+
+<script>
+//Regular Expressions are used to look for a certain button in a string. They are used to validate a user input.
+var str = "Atlanta \n567493%";
+//g for global, i for case insensitive     
+var pattern = /\n/g; 
+//var pattern = /^b/g; 
+//var pattern = /\d{4}/g; 
+//var pattern = /\s/g; 
+//var pattern = /\W/g; 
+//var pattern = /\w/g; 
+//var pattern = /[a-z]/g; 
+//var pattern = /[^atn]/g; 
+//var pattern = /[4-7]/g; 
+//var pattern = /\d/g; 
+    
+//var pattern = new RegExp("a","g");    
+document.getElementById("string").innerHTML = str;   
+document.getElementById("pattern").innerHTML = pattern;   
+document.getElementById("search").innerHTML = str.search(pattern);   
+document.getElementById("match").innerHTML = str.match(pattern);   
+document.getElementById("test").innerHTML = pattern.test(str);   
+</script>
+</body>
+</html>

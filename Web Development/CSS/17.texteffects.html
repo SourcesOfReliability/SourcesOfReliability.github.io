@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>Text Effects</title>
+          
+ <style>
+     .bluebox{
+        background-color: #3A5795;
+        color: white;
+        height: 100px;
+        width:auto;
+        overflow: hidden;
+        /* Also has overflow: scroll to give a scroll bar; */
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+     }
+     .bluebox:hover{
+        overflow: visible;
+    /* This is useful! */     
+     } 
+     .yellowbox{
+        background-color: rgb(222, 224, 85);
+        height: 100px;
+        width: 400px;
+       /* word-break: break-all; */
+        word-wrap: break-word;
+        overflow: scroll; 
+         
+     } 
+     .greenbox{
+         background-color:#286604;
+         height: 100px;
+         width: auto;
+     }
+     .great{
+        background-color: #d60a0a; 
+     }
+ </style>
+ </head>
+ <body>
+ <div class="bluebox">
+ Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook
+ Facebook Facebook Facebook Facebook Facebook Facebook
+ Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook
+ </div>
+<div class="yellowbox">
+Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple LooooooooooooooooooooooongApple Apple Apple Apple Apple Apple Apple Apple Apple APple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple APple Apple Apple Apple Apple Apple Apple LooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongApple Apple Apple Apple Apple Apple APple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple APple Apple Apple Apple Apple Apple Apple
+</div>
+<div class="greenbox">
+<p>Microsoft</p>     
+</div>     
+</body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>Variables and Data Types</title>
+     
+ <style>
+     .bluebox{
+        background-color: #3A5795;
+        color: white;
+        height: 100px;
+        width:auto; 
+     }
+     .yellowbox{
+        background-color: rgb(222, 224, 85);
+        height: 100px;
+        width auto;
+        vertical-align: middle; 
+     } 
+     .greenbox{
+         background-color:#286604;
+         height: 100px;
+         width: auto;
+     }
+     .great{
+        background-color: #d60a0a 
+     }
+ </style>
+ </head>
+ <body>
+ <div id="facebook" class="bluebox">
+ <p>Facebook is <span class="great">great</span></p>    
+ </div>
+<div id="apple" class="yellowbox">
+<p>Apple</p>     
+</div>
+<div class="greenbox">
+<p>Microsoft</p>     
+</div> 
+<button id="button1">Change facebook style</button>   
+<button id="button2">Change apple style</button>       
+<script>
+    //Variables are used to store data values
+var x = 3;
+window.console.log(x);
+var y;
+y = 5;
+var z;
+z = x + " " + y;    
+window.console.log("The type of z is " + typeof(z))    
+window.console.log("The value of z is " + z);
+var greeting = "Hello";
+var firstname = "John";
+var message = greeting + " " + firstname
+window.console.log("The value of message is " + message);
+window.console.log("The type of message is " + typeof(message));
+var check = (x == 3);
+window.console.log("The value of check is " + check)  
+window.console.log("The type of check is " + typeof(check));
+var myArray = [1, 2, 3];
+window.console.log(myArray)
+window.console.log(typeof(myArray));    
+</script>     
+</body>

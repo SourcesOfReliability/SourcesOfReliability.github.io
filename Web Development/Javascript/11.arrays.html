@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arrays</title>
+</head>
+    
+<body>
+<p id="myParagraph">Javascript</p>
+<script>
+var shoppingList = ["bread", "eggs", "milk"];
+//var shoppingList = new Array("bread", "eggs", "milk");
+showResults(shoppingList);
+showResults(shoppingList[0]);
+showResults(shoppingList[2]);
+function showResults(x){    
+document.getElementById("myParagraph").innerHTML += "<br>" + x; 
+}
+shoppingList[1] = "yogurt";
+showResults(shoppingList);   
+shoppingList[2] = "orange";
+showResults(shoppingList);  
+delete shoppingList[1];
+showResults(shoppingList);    
+shoppingList[1] = "yogurt";
+showResults(shoppingList);
+shoppingList.splice(1, 1);
+showResults(shoppingList)    
+shoppingList.splice(1, 0, "banana", "apple");   
+showResults(shoppingList);   
+shoppingList.sort();
+showResults(shoppingList);
+shoppingList.reverse();
+showResults(shoppingList);    
+var myString = "What is the weather like?";
+var myArray = myString.split('', 2);
+showResults(myArray);    
+</script>
+</body>
+</html>
