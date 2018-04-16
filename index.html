@@ -3,8 +3,39 @@
 <head> 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <title>Gabe's Site</title>
+<style>
+  #subjects{
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 12px;
+  }
+  #subjects ul li{
+    list-style: none;
+  }
+  #subjects ul li a{
+     text-decoration: none;
+     -webkit-transition: font-size 0.5s ease;
+    font-size: 20px;
+  }
+  #subjects ul li a:hover, subjects ul li a.active{
+     font-size: 23px;
+     font-weight: bold;
+  }
+  #subjects p{
+     font-size: 30px;
+  }
+</style>
+
 </head>  
   <body>
-    This is the default page. Nothing to see here.
+    <div id="subjects">
+      <p>Subjects</p>
+         <ul>
+            <li><a href="https://gabebotics.github.io/Science/">Science</li>
+            <li><a href="https://gabebotics.github.io/Latin/">Latin<a></li>
+            <li><a href="https://gabebotics.github.io/History/">History<a></li>
+        </ul>
+    </div>          
   </body>  
 </html>
