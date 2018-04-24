@@ -2,8 +2,13 @@ var playing = false;
 var score;
 var action;
 var timeremaining;
-var correctAnswer;
+var correctAnswer; 
 //if we click on the start/reset
+if (getCookie("score") == ""){
+    document.cookie = "score = 0";
+} else{
+    document.getElementById("highScoreValue").innerHTML = getCookie("score");
+}
 for(i=1; i<5; i++){
 document.getElementById("box" + i).onclick = function(){
     //check if we are playing
@@ -112,6 +117,10 @@ function startCountdown(){
             hide("correct");
             hide("wrong");
             playing = false;
+            if (score >  getCookie("score")){
+                document.cookie = "score = " + score;
+                document.getElementById("highScoreValue").innerHTML = getCookie("score")
+            }
             document.getElementById("startreset").innerHTML = "Start Game";
         }
     }, 1000);
@@ -124,6 +133,21 @@ function hide(Id){
 }
 function show(Id){
     document.getElementById(Id).style.display = "block";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 //generate question and multiple answers
